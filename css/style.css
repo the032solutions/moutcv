@@ -1,0 +1,35 @@
+.jumbotron .container {
+  max-width: 40rem; }
+  @media screen and (min-width: 768px) {
+    .jumbotron .container {
+      padding: 4rem 0; } }
+
+/*# sourceMappingURL=style.css.map */
+
+/* Set the size of the div element that contains the map */
+#mapid {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+#heat-map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+#bike-map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}

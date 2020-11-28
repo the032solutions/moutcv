@@ -1,0 +1,8 @@
+//Main Area 
+.jumbotron .container {
+    max-width: 40rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 4rem 0;
+    }
+}
