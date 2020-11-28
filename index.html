@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">
+    <title>Album</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41m291sjiouoPpLkGqrV6yWJnUXWWs3c&callback=initMap&libraries=visualization&v=weekly"
+    defer
+  ></script>
+  <script src="asset/js/map2.js"></script>
+ </head>
+<body>
+
+    
+    <!-- Header and Navigation area  -->
+    <header>
+        <!-- <div class="collapse bg-dark" id="header__collapse">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-sm-8 col-md-7">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+                    </div>
+                    <div class="col-sm-4 col-md-3 offset-md-1">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li><a href="#" class="text-white">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="navbar navbar-dark bg-dark d-flex align-items-center">
+            <div class="container">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <i class="fas fa-camera mr-2"></i>
+                    <strong>MouT CV</strong>
+                </a>
+                <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#header__collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+            </div>
+            <div class="container">
+                <div class="nav-item mr-2">
+                    <div
+                      id="navbar-loader"
+                      class="spinner-grow d-none"
+                      role="status"
+                    ></div>
+                  </div>
+                  <div class="nav-item">
+                    <span id="navbar-time" class="navbar-text"> </span>
+                  </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header and Navigation area End -->
+
+    <!-- Main Part  -->
+    <!--
+        <div class="main">
+        <div class="section">
+            <div class="jumbotron bg-white text-center">
+                <div class="container">
+                    <h1>Album Example</h1>
+                    <p class="lead text-muted">
+                        Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-primary">Main call to action</a>
+                        <a href="#" class="btn btn-secondary">Second action</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    -->
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div id="linesg" class="chart-md"></div>
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <img class="card-img-top shadow-sm" src="asset/images/image.jpg" alt="Card Img">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div id="map"></div>
+                            <!-- <div id="chart" class="chart-md"></div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div id="chart" class="chart-md"></div>
+                            <!-- <div id="chart" class="chart-md"></div> -->
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top shadow-sm" src="asset/images/image.jpg" alt="Card Img">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div id="chart-mentions" class="chart-lg"></div>
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div id="chart-revenue-bg"></div>
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top shadow-sm" src="asset/images/image.jpg" alt="Card Img">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top shadow-sm" src="asset/images/image.jpg" alt="Card Img">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top shadow-sm" src="asset/images/image.jpg" alt="Card Img">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group btn-sm">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer bg-white py-5">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="footer__left">
+                <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+                <p>New to Bootstrap? <a href="$">Visit the homepage</a> or read our <a href="#">getting started guide.</a></p>
+            </div>
+            <div class="footer__right">
+                <a href="#">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Part End -->
+
+    <!-- Libs JS -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Last Sync -->
+    <script src="asset/js/setCurrentTime.js"></script>
+    <!-- Los otros tres archivos del ejemplo.-->
+    <script src="asset/js/areaChart.js"></script>
+    <script src="asset/js/stackedBarChart.js"></script>
+    <script src="asset/js/updateScript.js"></script>
+    <!-- Charts -->
+    <script>
+        level = 0;
+      </script>
+    <script src="asset/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="asset/js/popper.min.js"></script>
+    <script src="asset/js/bootstrap.min.js"></script>
+    <script src="asset/js/basicg.js"></script>
+    <script src="asset/js/linesg.js"></script>
+
+
+</body>
+</html>
