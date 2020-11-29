@@ -1,7 +1,7 @@
 function updateLastSyncTime() {
     var currentdate = new Date();
     var datetime =
-      "Last Sync: " +
+      "Última sincronización: " +
       currentdate.getDate() +
       "/" +
       (currentdate.getMonth() + 1) +

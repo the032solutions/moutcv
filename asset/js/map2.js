@@ -7,7 +7,7 @@ let map, heatmap;
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 13,
-    center: { lat: 39.48185948798729, lng: -0.33965401470055445 },
+    center: { lat: 39.473564454956396, lng: -0.3765601475317846 },
     mapTypeId: "satellite",
   });
   heatmap = new google.maps.visualization.HeatmapLayer({
